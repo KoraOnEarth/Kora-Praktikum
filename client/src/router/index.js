@@ -27,6 +27,16 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/RegistrationView.vue')
   },
   {
+    path: '/1slide',
+    name: '1slide',
+    component: () => import(/* webpackChunkName: "about" */ '../views/slides/1slide.vue')
+  },
+  {
+    path: '/2slide',
+    name: '2slide',
+    component: () => import(/* webpackChunkName: "about" */ '../views/slides/2slide.vue')
+  },
+  {
     path: '/:CatchAll(.*)',
     name: 'NotFound',
     component: () => import('../views/NotFoundView.vue')

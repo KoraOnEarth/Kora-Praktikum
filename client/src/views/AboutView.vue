@@ -1,6 +1,5 @@
 <template>
   <Header />
-  <SecondHeader />
   <div class="mount">
     <div class="container">
       <div class="info">
@@ -21,17 +20,14 @@
       </div>
     </div>
   </div>
-  <Footer />
 </template>
 
 <script>
 import Header from "@/components/Header.vue";
-import Footer from "@/components/Footer.vue";
 export default {
   name: 'AboutView',
   components: {
     Header,
-    Footer,
   },
 };
 </script>

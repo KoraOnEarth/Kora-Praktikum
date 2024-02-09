@@ -2,9 +2,6 @@
   <Header />
   <div class="mount">
     <div class="container">
-      <button @click="getUser">Тут какой-то текст для обращения к store</button>
-      <p v-for="result in results">{{ result.title }}</p>
-      <p v-for="result in results">{{ result.message }}</p>
       <p>{{ results.data }}</p>
       <p>{{ textFirst }}</p>
       <p>{{ textSecond }}</p>
@@ -13,12 +10,10 @@
       <p>{{ textFifth }}</p>
     </div>
   </div>
-  <Footer />
 </template>
 
 <script>
   import Header from '@/components/Header.vue';
-  import Footer from '@/components/Footer.vue';
   import { homePageAboutInfo } from '@/_config';
 
   export default {
@@ -35,7 +30,6 @@
     },
     components: {
       Header,
-      Footer,
     },
     methods: {
       getUser(){
@@ -49,6 +43,8 @@
 </script>
 
 <style lang="scss" scoped>
+@import "@/assets/css/slides.scss";
+
   .mount {
     margin: auto;
     margin-top: 50px;

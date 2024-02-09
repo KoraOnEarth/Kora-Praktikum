@@ -26,6 +26,6 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background: linear-gradient(#141e30, #2a6c56);
+  /* background: linear-gradient(#141e30, #2a6c56); */
 }
 </style>
