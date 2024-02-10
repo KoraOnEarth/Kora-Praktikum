@@ -31,9 +31,6 @@
         <br>
         <p>А теперь, когда мы немного познакомились с языком, давайте начнем разбираться с ООП в этом языке.</p>
         <div class="form-btns">
-          <form action="/">
-          <button>Назад</button>
-          </form>
           <form action="/1slide">
             <button>Далее</button>
           </form>
