@@ -1,4 +1,5 @@
 <template>
+  <SecondHeader/>
   <div class="login-box">
     <h2>Авторизация</h2>
     <form @submit.prevent>
@@ -29,9 +30,12 @@
 </template>
 
 <script>
-
+  import SecondHeader from '@/components/secondHeader.vue';
   export default {
     name: 'LoginFormView',
+    components: {
+      SecondHeader
+    },
   };
 </script>
 
