@@ -15,12 +15,6 @@
           <input type="password" v-model="password" required />
           <label>Ваш пароль<span class="small_text">*</span></label>
         </div>
-        <div class="user-box">
-          <input type="password" v-model="confirmPassword" required />
-          <label
-            >Подтвердите пароль<span class="small_text">*</span></label
-          >
-        </div>
         <div class="display_center">
           <a @click="onRegistration">
             <span></span>
@@ -37,13 +31,34 @@
   </template>
   
   <script>
-    import SecondHeader from '@/components/secondHeader.vue';
+    import { registration } from '@/http/userAPI';
+    import SecondHeader from "@/components/secondHeader.vue";
     export default {
-      name: 'RegistrationFormView',
-      components: {
-    SecondHeader
-},
-    };
+    name: 'RegistrationFormView',
+    data() {
+      return {
+        nickname: '',
+        email: '',
+        password: '',
+      };
+    },
+    methods: {
+      async onRegistration() {
+        const result = await registration(
+          this.nickname,
+          this.email,
+          this.password,
+        );
+        if (result.status == 201) {
+          alert('Спасибо за регистрацию! \nТеперь вы имеете доступ к курсам');
+        }
+        console.warn(result);
+      },
+    },
+    components: {
+      SecondHeader
+    }
+  };
   </script>
   
   <style lang="scss" scoped>

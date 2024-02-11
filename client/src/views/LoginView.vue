@@ -30,12 +30,32 @@
 </template>
 
 <script>
-  import SecondHeader from '@/components/secondHeader.vue';
+  import SecondHeader from "@/components/secondHeader.vue"
   export default {
     name: 'LoginFormView',
+    data() {
+      return {
+        email: '',
+        password: '',
+      };
+    },
+    methods: {
+      async LogIn() {
+        try {
+          const result = await login(this.email, this.password);
+          if (result.code !== 'ERR_BAD_REQUEST') {
+            alert('Залогинен');
+            console.log(result);
+            localStorage.setItem('token', JSON.stringify(result));
+          }
+        } catch (error) {
+          console.log(error);
+        }
+      },
+    },
     components: {
       SecondHeader
-    },
+    }
   };
 </script>
 
