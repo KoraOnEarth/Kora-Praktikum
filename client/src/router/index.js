@@ -72,21 +72,6 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/slides/9slide.vue')
   },
   {
-    path: '/10slide',
-    name: '10slide',
-    component: () => import(/* webpackChunkName: "about" */ '../views/slides/10slide.vue')
-  },
-  {
-    path: '/11slide',
-    name: '11slide',
-    component: () => import(/* webpackChunkName: "about" */ '../views/slides/11slide.vue')
-  },
-  {
-    path: '/12slide',
-    name: '12slide',
-    component: () => import(/* webpackChunkName: "about" */ '../views/slides/12slide.vue')
-  },
-  {
     path: '/:CatchAll(.*)',
     name: 'NotFound',
     component: () => import('../views/NotFoundView.vue')
